@@ -21,5 +21,22 @@
     "eslint-plugin-prettier": "^2.6.0",
     "flow-bin": "^0.66.0",
     "prettier": "^1.10.2"
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "src/js/**/*.{js}"
+    ],
+    "coverageReporters": [
+      "lcov",
+      "cobertura"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "statements": 100,
+        "branches": 100,
+        "functions": 100,
+        "lines": 100
+      }
+    }
   }
 }
