@@ -3,9 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "react": "^16.2.0",
-    "react-dom": "^16.2.0",
-    "react-scripts": "1.1.1"
+    "react": "^16.6.3",
+    "react-dom": "^16.6.3",
+    "react-scripts": "^2.1.1"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -15,28 +15,21 @@
     "eslint": "eslint --cache --cache-location 'misc/.eslintcache' src/",
     "prettier": "prettier --config .prettierrc --write 'src/**/*.js'"
   },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ],
   "devDependencies": {
-    "eslint-config-prettier": "^2.9.0",
-    "eslint-plugin-flowtype": "^2.45.0",
-    "eslint-plugin-prettier": "^2.6.0",
-    "flow-bin": "^0.66.0",
-    "prettier": "^1.10.2"
-  },
-  "jest": {
-    "collectCoverageFrom": [
-      "src/js/**/*.{js}"
-    ],
-    "coverageReporters": [
-      "lcov",
-      "cobertura"
-    ],
-    "coverageThreshold": {
-      "global": {
-        "statements": 100,
-        "branches": 100,
-        "functions": 100,
-        "lines": 100
-      }
-    }
+    "enzyme": "^3.8.0",
+    "enzyme-adapter-react-16": "^1.7.1",
+    "enzyme-to-json": "^3.3.5",
+    "eslint-config-prettier": "^3.3.0",
+    "eslint-plugin-flowtype": "^3.2.0",
+    "eslint-plugin-prettier": "^3.0.0",
+    "flow-bin": "^0.88.0",
+    "node-sass": "^4.11.0",
+    "prettier": "^1.15.3"
   }
 }

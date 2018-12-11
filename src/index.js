@@ -1,13 +1,18 @@
 // @flow
 
+// $FlowFixMe: css import can not understood by flow
+import './assets/index.scss';
+
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './js/App';
-import registerServiceWorker from './registerServiceWorker';
+import App from './app/App';
+import { StoreProvider } from './app/Store';
 
 const root = document.getElementById('root');
-if (root) {
-    ReactDOM.render(<App />, root);
-    registerServiceWorker();
-}
+root &&
+    ReactDOM.render(
+        <StoreProvider>
+            <App />
+        </StoreProvider>,
+        root
+    );
