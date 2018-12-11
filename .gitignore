@@ -15,7 +15,10 @@
 .env.development.local
 .env.test.local
 .env.production.local
-.idea/
+.idea/codeStyles
+.idea/markdown-navigator
+.idea/markdown-navigator.xml
+.idea/workspace.xml
 misc/
 
 npm-debug.log*
