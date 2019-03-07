@@ -7,7 +7,7 @@ import { ArticleFilter } from './article/ArticleFilter';
 
 type AppProps = {||};
 
-class App extends PureComponent<AppProps> {
+export default class App extends PureComponent<AppProps> {
     render() {
         return (
             <div className="App">
@@ -20,5 +20,3 @@ class App extends PureComponent<AppProps> {
         );
     }
 }
-
-export default App;

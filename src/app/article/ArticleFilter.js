@@ -1,34 +1,36 @@
 // @flow
 
-import React, { Component } from 'react';
+import React, { useState, useCallback } from 'react';
 import { Icon } from '../../icons/icon';
 import { StoreState } from '../Store';
 
-type ArticleFilterProps = {||};
-type ArticleFilterState = { value: string };
+type InputOnChangeHandler = (SyntheticInputEvent<HTMLInputElement>) => void;
+type FormSubmitHandler = (SyntheticEvent<HTMLFormElement>) => void;
 
-export class ArticleFilter extends Component<ArticleFilterProps, ArticleFilterState> {
-    state: ArticleFilterState = { value: '' };
+export const ArticleFilter = () => {
+    const [value, setValue] = useState<string>('');
 
-    onChange = (event: any) => event.preventDefault() || this.setState({ value: event.target.value });
-
-    submit = (event: any) => {
+    const onChange = useCallback<InputOnChangeHandler>(event => {
         event.preventDefault();
-        StoreState.set({ filter: this.state.value });
-    };
+        setValue(event.target.value);
+    }, []);
 
-    render = () => {
-        const { value } = this.state;
+    const submit = useCallback<FormSubmitHandler>(
+        event => {
+            event.preventDefault();
+            StoreState.set({ filter: value });
+        },
+        [value]
+    );
 
-        return (
-            <div className="article-filter">
-                <form onSubmit={this.submit}>
-                    <input type="text" value={value} onChange={this.onChange} placeholder="Filter for..." />
-                    <button>
-                        <Icon.Search />
-                    </button>
-                </form>
-            </div>
-        );
-    };
-}
+    return (
+        <div className="article-filter">
+            <form onSubmit={submit}>
+                <input type="text" value={value} onChange={onChange} placeholder="Filter for..." />
+                <button>
+                    <Icon.Search />
+                </button>
+            </form>
+        </div>
+    );
+};
