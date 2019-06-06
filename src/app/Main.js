@@ -26,7 +26,7 @@ export class MainContainer extends Component<MainProps> {
 
         return (
             <main>
-                <ArticleList articles={articles.filter(a => !filter || a.title.indexOf(filter) !== -1)} />
+                <ArticleList articles={articles.filter(article => !filter || article.title.indexOf(filter) !== -1)} />
             </main>
         );
     };

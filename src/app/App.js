@@ -7,8 +7,8 @@ import { ArticleFilter } from './article/ArticleFilter';
 
 type AppProps = {||};
 
-export default class App extends PureComponent<AppProps> {
-    render() {
+export class App extends PureComponent<AppProps> {
+    render(): React$Node {
         return (
             <div className="App">
                 <header>
