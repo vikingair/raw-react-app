@@ -6,9 +6,29 @@
       <option name="checkSyntaxErrors" value="true" />
       <option name="description" />
       <option name="exitCodeBehavior" value="ERROR" />
-      <option name="fileExtension" value="js" />
+      <option name="fileExtension" value="ts" />
       <option name="immediateSync" value="false" />
-      <option name="name" value="Prettier" />
+      <option name="name" value="Prettier.ts" />
+      <option name="output" value="" />
+      <option name="outputFilters">
+        <array />
+      </option>
+      <option name="outputFromStdout" value="false" />
+      <option name="program" value="$PROJECT_DIR$/node_modules/.bin/prettier" />
+      <option name="runOnExternalChanges" value="true" />
+      <option name="scopeName" value="Current File" />
+      <option name="trackOnlyRoot" value="false" />
+      <option name="workingDir" value="$PROJECT_DIR$" />
+      <envs />
+    </TaskOptions>
+    <TaskOptions isEnabled="true">
+      <option name="arguments" value="--config .prettierrc --write $FilePath$" />
+      <option name="checkSyntaxErrors" value="true" />
+      <option name="description" />
+      <option name="exitCodeBehavior" value="ERROR" />
+      <option name="fileExtension" value="tsx" />
+      <option name="immediateSync" value="false" />
+      <option name="name" value="Prettier.tsx" />
       <option name="output" value="" />
       <option name="outputFilters">
         <array />

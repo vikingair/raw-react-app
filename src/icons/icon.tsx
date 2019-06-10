@@ -1,14 +1,10 @@
-// @flow
-
 import React from 'react';
 import Icons from './icon-path.json';
 
-type IconProps = {
-    className?: string,
-};
+type IconProps = { className?: string };
 
-const _Icon = (symbol: string, props?: IconProps = {}, width?: number = 512) => (
-    <svg className={props.className ? props.className + ' icon' : 'icon'} viewBox={`0 0 ${width} 512`}>
+const _Icon = (symbol: keyof typeof Icons, { className }: IconProps = {}, width: number = 512) => (
+    <svg className={className ? className + ' icon' : 'icon'} viewBox={`0 0 ${width} 512`}>
         <path fill="currentColor" d={Icons[symbol]} />
     </svg>
 );

@@ -18,12 +18,12 @@ echo -e "${GREEN}Done${NC}"
 echo ""
 echo -e "${CYAN}Checking for circular dependencies${NC}:"
 echo ""
-yarn --silent run madge -c src/
+yarn --silent run madge -c --extensions ts,tsx src/
 
 echo ""
-echo -e "Running ${CYAN}flow${NC}:"
+echo -e "Running ${CYAN}TSC${NC}:"
 echo -e "${GREEN}"
-yarn --silent run flow
+yarn run tsc
 
 echo ""
 echo -e "${NC}"

@@ -1,13 +1,13 @@
 // @flow
 
-import React, { useState, useCallback } from 'react';
+import React, { useState, useCallback, ChangeEventHandler } from 'react';
 import { Icon } from '../../icons/icon';
 import { StoreState } from '../Store';
 
-type InputOnChangeHandler = (SyntheticInputEvent<HTMLInputElement>) => void;
-type FormSubmitHandler = (SyntheticEvent<HTMLFormElement>) => void;
+type InputOnChangeHandler = ChangeEventHandler<HTMLInputElement>;
+type FormSubmitHandler = ChangeEventHandler<HTMLFormElement>;
 
-export const ArticleFilter = () => {
+export const ArticleFilter: React.FC = () => {
     const [value, setValue] = useState<string>('');
 
     const onChange = useCallback<InputOnChangeHandler>(event => {

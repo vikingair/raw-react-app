@@ -1,5 +1,3 @@
-// @flow
-
 import { Mock } from './mocks';
 
 export type ArticleData = { title: string, authors: string, cover: string };

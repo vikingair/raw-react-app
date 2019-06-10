@@ -1,12 +1,10 @@
-// @flow
-
 import React from 'react';
 import { Article } from './Article';
-import { type ArticleData } from '../Webservice';
+import { ArticleData } from '../Webservice';
 
-type ArticleListProps = {| articles: ArticleData[] |};
+type ArticleListProps = { articles: ArticleData[] };
 
-export const ArticleList = ({ articles }: ArticleListProps): React$Node => (
+export const ArticleList: React.FC<ArticleListProps> = ({ articles }) => (
     <div className="article-list">
         {articles.map((data, index) => (
             <Article data={data} key={index} />

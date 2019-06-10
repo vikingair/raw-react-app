@@ -1,11 +1,9 @@
-// @flow
-
 import React from 'react';
-import { type ArticleData } from '../Webservice';
+import { ArticleData } from '../Webservice';
 
-type ArticleProps = {| data: ArticleData |};
+type ArticleProps = { data: ArticleData };
 
-export const Article = ({ data }: ArticleProps): React$Node => (
+export const Article: React.FC<ArticleProps> = ({ data }) => (
     <div>
         <img src={`https://cdn.pixabay.com/photo${data.cover}`} alt="cover" style={{ width: '100%' }} />
         <div>Title: {data.title}</div>

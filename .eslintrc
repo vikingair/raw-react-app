@@ -2,13 +2,9 @@
   "extends": [
     "react-app",
     "prettier",
-    "prettier/flowtype",
     "prettier/react"
   ],
-  "plugins": [
-    "prettier",
-    "flowtype"
-  ],
+  "plugins": ["prettier"],
   "rules": {
     "prettier/prettier": ["error", {
       "useTabs": false,
@@ -17,9 +13,8 @@
       "singleQuote": true,
       "trailingComma": "es5",
       "jsxBracketSameLine": true,
-      "parser": "flow"}],
+      "parser": "typescript"}],
     "no-unused-vars": 2,
-    "no-duplicate-imports": 2,
-    "flowtype/require-valid-file-annotation": [2, "always"]
+    "no-duplicate-imports": 2
   }
 }
