@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArticleData } from '../Webservice';
+import { ArticleData } from '../../services/Webservice';
 
 type ArticleProps = { data: ArticleData };
 

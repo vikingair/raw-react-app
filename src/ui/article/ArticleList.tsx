@@ -1,6 +1,6 @@
 import React from 'react';
 import { Article } from './Article';
-import { ArticleData } from '../Webservice';
+import { ArticleData } from '../../services/Webservice';
 
 type ArticleListProps = { articles: ArticleData[] };
 

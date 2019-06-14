@@ -1,6 +1,6 @@
 import React, { useEffect, useContext } from 'react';
 import { ArticleList } from './article/ArticleList';
-import { Webservice } from './Webservice';
+import { Webservice } from '../services/Webservice';
 import { Icon } from '../icons/icon';
 import { Store, StoreState } from './Store';
 

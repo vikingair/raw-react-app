@@ -1,5 +1,5 @@
 import React, { ReactNode, useState, useCallback } from 'react';
-import { ArticleData } from './Webservice';
+import { ArticleData } from '../services/Webservice';
 
 type State = { articles?: ArticleData[]; filter?: string };
 const initialState: State = { articles: undefined, filter: undefined };
