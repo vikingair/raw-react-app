@@ -11,7 +11,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eslint": "eslint --cache --cache-location 'misc/.eslintcache' src/"
+    "eslint": "eslint --cache --cache-location 'misc/.eslintcache' 'src/**/*.{js,ts,tsx}'"
   },
   "devDependencies": {
     "@types/enzyme": "^3.9.3",

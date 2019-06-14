@@ -1,6 +1,6 @@
 import { Mock } from './mocks';
 
-export type ArticleData = { title: string, authors: string, cover: string };
+export type ArticleData = { title: string; authors: string; cover: string };
 
 const sleep = (ms: number): Promise<void> => new Promise(resolve => window.setTimeout(resolve, ms));
 
