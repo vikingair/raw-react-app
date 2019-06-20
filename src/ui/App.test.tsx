@@ -1,9 +1,22 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import { App } from './App';
+import { shallow } from 'enzyme';
 
-it('renders without crashing', () => {
-    const div = document.createElement('div');
-    ReactDOM.render(<App />, div);
-    ReactDOM.unmountComponentAtNode(div);
+describe('App', () => {
+    it('renders the content', () => {
+        expect(shallow(<App />)).toMatchInlineSnapshot(`
+            <div
+              className="App"
+            >
+              <header>
+                <img
+                  alt="logo"
+                  src="logo.svg"
+                />
+                <ArticleFilter />
+              </header>
+              <Main />
+            </div>
+        `);
+    });
 });

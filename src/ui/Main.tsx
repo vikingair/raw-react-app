@@ -15,13 +15,13 @@ export const Main: React.FC = () => {
 
     if (!articles)
         return (
-            <main className="loading">
+            <main className="loading" data-testid="spinner">
                 <Icon.Spinner className="big-spinner" />
             </main>
         );
 
     return (
-        <main>
+        <main data-testid="articles">
             <ArticleList articles={articles.filter(article => !filter || article.title.indexOf(filter) !== -1)} />
         </main>
     );
