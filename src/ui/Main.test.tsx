@@ -31,7 +31,7 @@ describe('<Main />', () => {
         expect(queryByTestId('spinner')).not.toBe(null);
         expect(queryByTestId('articles')).toBe(null);
 
-        await global.nextTick();
+        await act(global.nextTick);
 
         Mock$Webservice.getArticles.wasCalled(1);
         expect(queryByTestId('spinner')).toBe(null);
@@ -50,7 +50,7 @@ describe('<Main />', () => {
         expect(wrapper.find(Icon.Spinner).length).toBe(1);
         expect(wrapper.find(ArticleList).length).toBe(0);
 
-        await global.nextTick();
+        await act(global.nextTick);
         wrapper.update();
 
         Mock$Webservice.getArticles.wasCalled(1);

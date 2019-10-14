@@ -3,40 +3,40 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6",
+    "react": "^16.10.2",
+    "react-dom": "^16.10.2",
     "react-scripts": "3.0.1"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eslint": "eslint --cache --cache-location 'misc/.eslintcache' 'src/**/*.{js,ts,tsx}'"
+    "eslint": "eslint --cache --cache-location 'misc/.eslintcache' --ext .ts,.tsx src/"
   },
   "devDependencies": {
-    "@testing-library/react": "^8.0.1",
-    "@types/enzyme": "^3.9.3",
+    "@testing-library/jest-dom": "^4.1.2",
+    "@testing-library/react": "^9.3.0",
+    "@types/enzyme": "^3.10.3",
     "@types/enzyme-adapter-react-16": "^1.0.5",
     "@types/enzyme-to-json": "^1.5.3",
-    "@types/jest": "24.0.13",
+    "@types/jest": "^24.0.18",
     "@types/node": "12.0.7",
     "@types/react": "16.8.19",
     "@types/react-dom": "16.8.4",
     "enzyme": "^3.10.0",
-    "enzyme-adapter-react-16": "^1.14.0",
-    "enzyme-to-json": "^3.3.5",
-    "eslint-config-prettier": "^4.3.0",
-    "eslint-plugin-prettier": "^3.1.0",
-    "jest-dom": "^3.5.0",
+    "enzyme-adapter-react-16": "^1.15.1",
+    "enzyme-to-json": "^3.4.2",
+    "eslint-config-prettier": "^6.4.0",
+    "eslint-plugin-prettier": "^3.1.1",
     "madge": "^3.4.4",
     "node-sass": "^4.12.0",
-    "prettier": "^1.17.1",
-    "spy4js": "^2.5.0",
+    "prettier": "^1.18.2",
+    "spy4js": "^2.6.1",
     "typescript": "3.5.1"
   },
   "jest": {
     "collectCoverageFrom": [
-      "src/app/**/*.{ts,tsx}"
+      "src/**/*.{ts,tsx}"
     ],
     "snapshotSerializers": [
       "enzyme-to-json/serializer"

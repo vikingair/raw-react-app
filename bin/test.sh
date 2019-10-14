@@ -18,12 +18,13 @@ echo -e "${GREEN}Done${NC}"
 echo ""
 echo -e "${CYAN}Checking for circular dependencies${NC}:"
 echo ""
-yarn --silent run madge -c --extensions ts,tsx src/
+yarn --silent run madge -c --extensions ts,tsx --ts-config tsconfig.json src/
 
 echo ""
-echo -e "Running ${CYAN}TSC${NC}:"
+echo -e "Running ${CYAN}TypeScript Checks${NC}:"
 echo -e "${GREEN}"
-yarn run tsc
+yarn --silent tsc
+echo -e "${GREEN}No errors!${NC}"
 
 echo ""
 echo -e "${NC}"
@@ -36,6 +37,6 @@ echo ""
 echo ""
 echo -e "Running ${CYAN}tests${NC}:"
 echo ""
-CI=true yarn --silent run test --coverage
+CI=true yarn --silent test --coverage --color
 
 popd &>/dev/null

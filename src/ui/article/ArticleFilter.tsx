@@ -1,5 +1,3 @@
-// @flow
-
 import React, { useState, useCallback, ChangeEventHandler } from 'react';
 import { Icon } from '../../icons/icon';
 import { StoreState } from '../Store';

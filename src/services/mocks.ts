@@ -1,5 +1,3 @@
-// @flow
-
 const articles = [
     {
         authors: 'Charlotte Link',

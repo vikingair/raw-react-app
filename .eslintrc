@@ -16,6 +16,9 @@
       "parser": "typescript"}],
     "react/sort-comp": 2,
     "react/jsx-no-bind": 2,
+    "arrow-body-style": ["error", "as-needed"],
+    "no-console": 2,
+    "eqeqeq": ["error", "always"],
     "no-unused-vars": 2,
     "no-duplicate-imports": 2
   }

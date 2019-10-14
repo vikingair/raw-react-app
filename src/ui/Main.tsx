@@ -13,12 +13,13 @@ export const Main: React.FC = () => {
         });
     }, []);
 
-    if (!articles)
+    if (!articles) {
         return (
             <main className="loading" data-testid="spinner">
                 <Icon.Spinner className="big-spinner" />
             </main>
         );
+    }
 
     return (
         <main data-testid="articles">
