@@ -10,7 +10,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
+    "test": "react-scripts test",
     "eslint": "eslint --cache --cache-location 'misc/.eslintcache' --ext .ts,.tsx src/"
   },
   "devDependencies": {
@@ -41,9 +41,6 @@
     "snapshotSerializers": [
       "enzyme-to-json/serializer"
     ]
-  },
-  "eslintConfig": {
-    "extends": "react-app"
   },
   "browserslist": {
     "production": [

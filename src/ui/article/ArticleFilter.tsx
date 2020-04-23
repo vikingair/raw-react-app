@@ -9,7 +9,6 @@ export const ArticleFilter: React.FC = () => {
     const [value, setValue] = useState<string>('');
 
     const onChange = useCallback<InputOnChangeHandler>((event) => {
-        event.preventDefault();
         setValue(event.target.value);
     }, []);
 

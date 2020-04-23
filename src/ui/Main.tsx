@@ -23,7 +23,7 @@ export const Main: React.FC = () => {
 
     return (
         <main data-testid="articles">
-            <ArticleList articles={articles.filter((article) => !filter || article.title.indexOf(filter) !== -1)} />
+            <ArticleList articles={articles.filter((article) => !filter || article.title.includes(filter))} />
         </main>
     );
 };
