@@ -9,9 +9,5 @@ const _Icon = (symbol: keyof typeof Icons, { className }: IconProps = {}, width:
     </svg>
 );
 
-export const Icon = {
-    Close: (props?: IconProps) => _Icon('CLOSE', props),
-    Phone: (props?: IconProps) => _Icon('PHONE', props, 330),
-    Search: (props?: IconProps) => _Icon('SEARCH', props, 512),
-    Spinner: (props?: IconProps) => _Icon('SPINNER', props),
-};
+export const IconSearch = (props?: IconProps) => _Icon('SEARCH', props, 512);
+export const IconSpinner = (props?: IconProps) => _Icon('SPINNER', props);

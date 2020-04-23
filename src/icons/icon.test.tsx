@@ -1,12 +1,12 @@
-import { Icon } from './icon';
+import { IconSearch, IconSpinner } from './icon';
 
 describe('Icon', () => {
     it('renders with additional className', () => {
-        const iconAdd = Icon.Search();
+        const iconAdd = IconSearch();
         expect(iconAdd.type).toBe('svg');
         expect(iconAdd.props.className).toBe('icon');
 
-        const iconBarCode = Icon.Spinner({ className: 'spinner' });
+        const iconBarCode = IconSpinner({ className: 'spinner' });
         expect(iconBarCode.type).toBe('svg');
         expect(iconBarCode.props.className).toBe('spinner icon');
     });

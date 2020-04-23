@@ -6,4 +6,4 @@ import '@testing-library/jest-dom/extend-expect';
 Enzyme.configure({ adapter: new Adapter() });
 
 // test utility to await all running promises
-global.nextTick = (): Promise<void> => new Promise(resolve => process.nextTick(resolve));
+global.nextTick = (): Promise<void> => new Promise((resolve) => process.nextTick(resolve));

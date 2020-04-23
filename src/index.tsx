@@ -5,11 +5,17 @@ import { App } from './ui/App';
 import { StoreProvider } from './ui/Store';
 import { Demo } from './demo/Demo';
 
-const Content = localStorage.getItem('demo') ? Demo : App;
+const isDemo = localStorage.getItem('demo') === 'true';
 
 ReactDOM.render(
-    <StoreProvider>
-        <Content />
-    </StoreProvider>,
+    isDemo ? (
+        <Demo />
+    ) : (
+        <React.StrictMode>
+            <StoreProvider>
+                <App />
+            </StoreProvider>
+        </React.StrictMode>
+    ),
     document.getElementById('root')
 );

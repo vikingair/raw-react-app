@@ -5,13 +5,11 @@ import { StoreProvider } from './Store';
 import { Spy } from 'spy4js';
 import { Webservice } from '../services/Webservice';
 import { mount } from 'enzyme';
-import { Icon } from '../icons/icon';
+import { IconSpinner } from '../icons/icon';
 import { ArticleList } from './article/ArticleList';
 import { Mock } from '../services/mocks';
 
-jest.mock('./article/ArticleList', () => ({
-    ArticleList: () => null,
-}));
+Spy.mockReactComponents('./article/ArticleList', 'ArticleList');
 
 const Mock$Webservice = Spy.mock(Webservice, 'getArticles');
 
@@ -47,14 +45,14 @@ describe('<Main />', () => {
         wrapper.setProps({});
 
         Mock$Webservice.getArticles.wasCalled(1);
-        expect(wrapper.find(Icon.Spinner).length).toBe(1);
+        expect(wrapper.find(IconSpinner).length).toBe(1);
         expect(wrapper.find(ArticleList).length).toBe(0);
 
         await act(global.nextTick);
         wrapper.update();
 
         Mock$Webservice.getArticles.wasCalled(1);
-        expect(wrapper.find(Icon.Spinner).length).toBe(0);
+        expect(wrapper.find(IconSpinner).length).toBe(0);
         expect(wrapper.find(ArticleList).length).toBe(1);
     });
 });

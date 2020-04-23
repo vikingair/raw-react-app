@@ -1,45 +1,59 @@
 .App {
     header {
-        background-color: #282c34;
+        display: flex;
+        align-items: center;
+        background-color: #1a1c20;
         height: 3em;
-        color: white;
+        color: #fff;
+
         img {
             height: 2.5em;
             padding: 0.25em 0.25em;
         }
     }
+
     .article-filter {
         display: inline-block;
-        float: right;
-        margin: 0.5em 1em;
+        margin: 0 1em 0 auto;
+
         input {
-            padding: 0.4em;
-            border-radius: 1em;
+            padding: 0.4em 0.75em;
+            border-radius: 0.5em;
             outline: 0;
         }
+
         button {
-            padding: 0.5em;
+            padding: 0.5em 1em;
             margin-left: 0.5em;
             border-radius: 0.5em;
             background-color: white;
             border: none;
             outline: 0;
+
             svg {
                 width: 1em;
             }
         }
     }
-    main {
-        &.loading {
-            margin: 2em 0;
-            text-align: center;
-        }
+
+    main.loading {
+        margin: 2em 0;
+        text-align: center;
     }
-    .article-list>div {
-        display: inline-block;
+
+    .article-list {
         padding: 1em;
-        width: 33.3%;
-        transition: width 0.5s;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 1em;
+
+        @media (min-width: 450px) {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        @media (min-width: 800px) {
+            grid-template-columns: 1fr 1fr 1fr;
+        }
     }
 
     svg.icon.big-spinner {

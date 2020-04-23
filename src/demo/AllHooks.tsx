@@ -2,7 +2,7 @@ import React, { useCallback, useEffect, useLayoutEffect, useState } from 'react'
 
 export type AllHooksProps = any;
 
-export const AllHooks: React.FC<AllHooksProps> = props => {
+export const AllHooks: React.FC<AllHooksProps> = (props) => {
     window.console.log('!! 1 !!', props);
 
     // useState: with static initialization
@@ -17,10 +17,10 @@ export const AllHooks: React.FC<AllHooksProps> = props => {
     window.console.log('!! 4 !!', props, { count, name });
 
     // useCallback: without dependencies
-    const increment = useCallback(() => setCount(c => c + 1), []);
+    const increment = useCallback(() => setCount((c) => c + 1), []);
 
     // useCallback: with dependency
-    const changeName = useCallback(() => setName(n => n + (props.foo || '')), [props.foo]);
+    const changeName = useCallback(() => setName((n) => n + (props.foo || '')), [props.foo]);
 
     // useEffect
     useEffect(() => {
