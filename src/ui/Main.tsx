@@ -15,14 +15,14 @@ export const Main: React.FC = () => {
 
     if (!articles) {
         return (
-            <main className="loading" data-testid="spinner">
+            <main className="loading">
                 <IconSpinner className="big-spinner" />
             </main>
         );
     }
 
     return (
-        <main data-testid="articles">
+        <main>
             <ArticleList articles={articles.filter((article) => !filter || article.title.includes(filter))} />
         </main>
     );

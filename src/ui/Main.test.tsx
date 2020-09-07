@@ -19,21 +19,19 @@ describe('<Main />', () => {
     });
 
     it('REACT-TESTING_LIBRARY: displays a spinner while loading the articles', async () => {
-        const { queryByTestId } = render(
+        const { container } = render(
             <StoreProvider>
                 <Main />
             </StoreProvider>
         );
 
         Mock$Webservice.getArticles.wasCalled(1);
-        expect(queryByTestId('spinner')).not.toBe(null);
-        expect(queryByTestId('articles')).toBe(null);
+        expect(container.querySelector('main')).toHaveClass('loading');
 
         await act(global.nextTick);
 
         Mock$Webservice.getArticles.wasCalled(1);
-        expect(queryByTestId('spinner')).toBe(null);
-        expect(queryByTestId('articles')).not.toBe(null);
+        expect(container.querySelector('main')).not.toHaveClass('loading');
     });
 
     it('ENZYME: displays a spinner while loading the articles', async () => {
