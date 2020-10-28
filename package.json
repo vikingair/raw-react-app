@@ -3,44 +3,35 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
-    "react-scripts": "^3.4.3"
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-scripts": "^4.0.0"
   },
   "scripts": {
     "start": "EXTEND_ESLINT=true react-scripts start",
     "build": "GENERATE_SOURCEMAP=false react-scripts build",
     "test": "react-scripts test --color",
     "eslint": "eslint --cache --cache-location 'misc/.eslintcache' --ext .ts,.tsx src/",
-    "circular-check": "madge -c --extensions ts,tsx --ts-config tsconfig.json src/"
+    "circular-check": "madge -c --extensions ts,tsx --ts-config tsconfig.json --no-spinner src/"
   },
   "devDependencies": {
-    "@testing-library/jest-dom": "^5.11.4",
-    "@testing-library/react": "^11.0.2",
-    "@types/enzyme": "^3.10.5",
-    "@types/enzyme-adapter-react-16": "^1.0.6",
-    "@types/enzyme-to-json": "^1.5.3",
-    "@types/jest": "^26.0.13",
+    "@testing-library/jest-dom": "^5.11.5",
+    "@testing-library/react": "^11.1.0",
+    "@types/jest": "^26.0.15",
     "@types/node": "12",
-    "@types/react": "^16.9.49",
-    "@types/react-dom": "^16.9.8",
-    "enzyme": "^3.11.0",
-    "enzyme-adapter-react-16": "^1.15.4",
-    "enzyme-to-json": "^3.5.0",
-    "eslint-config-prettier": "^6.11.0",
+    "@types/react": "^16.9.54",
+    "@types/react-dom": "^16.9.9",
+    "eslint-config-prettier": "^6.15.0",
     "eslint-plugin-prettier": "^3.1.4",
-    "madge": "^3.9.2",
-    "node-sass": "^4.14.1",
-    "prettier": "^2.1.1",
+    "madge": "^3.11.0",
+    "prettier": "^2.1.2",
+    "sass": "^1.27.0",
     "spy4js": "^2.11.0",
     "typescript": "3.9.7"
   },
   "jest": {
     "collectCoverageFrom": [
       "src/**/*.{ts,tsx}"
-    ],
-    "snapshotSerializers": [
-      "enzyme-to-json/serializer"
     ]
   },
   "browserslist": {

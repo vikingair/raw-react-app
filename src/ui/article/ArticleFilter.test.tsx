@@ -1,18 +1,19 @@
 import React from 'react';
-import { shallow } from 'enzyme';
+import { render, fireEvent, act } from '@testing-library/react';
 import { ArticleFilter, useArticleFilter } from './ArticleFilter';
 import { Spy } from 'spy4js';
 import { StoreState } from '../Store';
 
 describe('<ArticleFilter />', () => {
     it('changing the input will be displayed', () => {
-        const wrapper = shallow(<ArticleFilter />);
+        const { container } = render(<ArticleFilter />);
 
-        expect(wrapper.find('input').props().value).toBe('');
+        const input = container.querySelector('input')!;
+        expect(input.value).toBe('');
 
-        wrapper.find('input').props().onChange!({ preventDefault: () => {}, target: { value: 'foo' } } as any);
+        fireEvent.change(input, { preventDefault: () => {}, target: { value: 'foo' } });
 
-        expect(wrapper.find('input').props().value).toBe('foo');
+        expect(input.value).toBe('foo');
     });
 });
 
@@ -30,13 +31,15 @@ describe('useArticleFilter', () => {
         };
 
         // when
-        shallow(<DummyComponent />);
+        render(<DummyComponent />);
 
         // then - initial value
         expect(value).toBe('');
 
         // when - calling onChange
-        onChange({ preventDefault, target: { value: 'bar' } });
+        act(() => {
+            onChange({ preventDefault, target: { value: 'bar' } });
+        });
 
         // then
         expect(value).toBe('bar');
