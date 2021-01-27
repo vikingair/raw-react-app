@@ -1,3 +1,4 @@
+// can find more images here: https://pixabay.com/de/photos/
 const articles = [
     {
         authors: 'Charlotte Link',
@@ -6,8 +7,8 @@ const articles = [
     },
     {
         authors: 'Helen Fields',
-        title: 'Die perfekte Unschuld',
-        cover: '/2014/11/27/10/29/forest-547363__340.jpg',
+        title: 'Herz - Liebe - Sonnenuntergang',
+        cover: '/2018/02/12/10/45/heart-3147976_1280.jpg',
     },
     {
         authors: 'Carmen Korn',
