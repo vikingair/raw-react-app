@@ -22,7 +22,7 @@ describe('useArticleFilter', () => {
 
     it('changing the input will be displayed', () => {
         // given
-        const preventDefault = new Spy('preventDefault');
+        const preventDefault = Spy('preventDefault');
         const dummyCb = (() => {}) as any;
         let [value, onChange, onSubmit] = ['foo', dummyCb, dummyCb];
         const DummyComponent = () => {
