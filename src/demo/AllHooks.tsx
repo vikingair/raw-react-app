@@ -2,7 +2,7 @@ import React, { useCallback, useEffect, useLayoutEffect, useState } from 'react'
 
 export type AllHooksProps = any;
 
-export const AllHooks: React.FC<AllHooksProps> = (props) => {
+export const AllHooks: React.VFC<AllHooksProps> = (props) => {
     window.console.log('!! 1 !!', props);
 
     // useState: with static initialization

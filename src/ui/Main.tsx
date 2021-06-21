@@ -4,7 +4,7 @@ import { Webservice } from '../services/Webservice';
 import { Store, StoreState } from './Store';
 import { IconSpinner } from '../icons/icon';
 
-export const Main: React.FC = () => {
+export const Main: React.VFC = () => {
     const { articles, filter } = useContext(Store);
 
     useEffect(() => {
